@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import 'antd/dist/antd.css';
 import { Layout } from 'antd';
 
@@ -36,6 +36,7 @@ const App = () => {
               path='/employees'
               component={() => <Employees data={data} />}
               key='2' />
+            <Redirect to='/' />
           </Switch>
         </div>
       </Content>
